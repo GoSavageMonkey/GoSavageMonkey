@@ -1025,7 +1025,7 @@ gtag('consent', 'default', {
     msg.style.display = 'block';
   }
   // cookie consent banner (Consent Mode v2)
-  (function () {
+  function __initConsent() {
     var KEY = 'gsm-consent';
     function grant() {
       gtag('consent', 'update', {
@@ -1051,7 +1051,9 @@ gtag('consent', 'default', {
       try { localStorage.setItem(KEY, 'denied'); } catch (e) {}
       banner.remove();
     });
-  })();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', __initConsent);
+  else __initConsent();
 
   // close mobile menu after tapping a nav link + aria state
   var navToggle = document.getElementById('nav-toggle');
