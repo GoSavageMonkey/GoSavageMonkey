@@ -466,7 +466,7 @@
       overflow:visible !important;
       border-bottom:1px solid rgba(22,18,14,.08) !important;
     }
-    .nav-checkbox:checked ~ .nav-links a{padding:11px 0;width:100%;font-size:16px}
+    .nav-checkbox:checked ~ .nav-links a{padding:13px 0;width:100%;font-size:16px}
     .hero-photo{
       position:static !important;
       left:auto !important;
@@ -481,8 +481,16 @@
     }
     .hero-chip{display:none !important}
   }
+  @media (max-width:600px){
+    nav{padding:0 16px !important}
+    nav > img{width:150px !important;height:30px !important}
+    nav a[href="#book"]{font-size:13px !important;padding:10px 13px !important}
+    #top h1{font-size:36px !important;line-height:1.12 !important}
+    #top h1 + p{font-size:16px !important}
+  }
   @media (max-width:480px){
     .nav-links a{font-size:16px}
+    #book form div[style*="1fr 1fr"]{grid-template-columns:1fr !important}
   }
 </style>
 </helmet>
@@ -1007,6 +1015,21 @@
     msg.style.color = ok ? '#1E7A46' : '#B3341A';
     msg.style.background = ok ? '#E9F7EF' : '#FDEEE9';
     msg.style.display = 'block';
+  }
+  // close mobile menu after tapping a nav link + aria state
+  var navToggle = document.getElementById('nav-toggle');
+  var navBurger = document.querySelector('.nav-burger');
+  if (navToggle && navBurger) {
+    navBurger.setAttribute('aria-expanded', 'false');
+    navToggle.addEventListener('change', function () {
+      navBurger.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.nav-links a')) {
+        navToggle.checked = false;
+        navBurger.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
   document.addEventListener('submit', function (e) {
     var form = e.target && e.target.id === 'audit-form' ? e.target : null;
