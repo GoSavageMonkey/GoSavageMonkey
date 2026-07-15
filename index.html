@@ -602,6 +602,25 @@ gtag('consent', 'default', {
   .step:hover p { color: rgba(255,255,255,.85) !important; }
   .steps-grid:hover .step { opacity: .5; }
   .steps-grid:hover .step:hover { opacity: 1; }
+  /* ===== budget flow steps hover (become like Result card) ===== */
+  .flow-step { position: relative; transition: border-color .25s ease; }
+  .flow-step::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #F2670F, #F7A552);
+    opacity: 0;
+    transition: opacity .25s ease;
+    pointer-events: none;
+  }
+  .flow-step:hover::after { opacity: 1; }
+  .flow-step:hover { border-color: transparent !important; }
+  .flow-step > div { position: relative; z-index: 1; transition: color .25s ease; }
+  .flow-step > span { z-index: 2; }
+  .flow-step:hover > div:nth-of-type(1) { color: rgba(0,0,0,.55) !important; }
+  .flow-step:hover > div:nth-of-type(2) { color: #16120E !important; }
+  .flow-step:hover > div:nth-of-type(3) { color: rgba(0,0,0,.6) !important; }
   /* ===== interaction states (hover / focus) ===== */
   a[href="#book"], button[type="submit"], .nav-links a, details summary, #cookie-banner button {
     transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, opacity .18s ease;
@@ -775,27 +794,27 @@ gtag('consent', 'default', {
       <div style="margin:54px 0 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:34px 28px">
         <div style="font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:22px">Where the money flows — and leaks</div>
         <div style="display:flex;align-items:stretch;gap:10px;flex-wrap:wrap">
-          <div style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px">
+          <div class="flow-step" style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px">
             <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#F7A552">Step 01</div>
             <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-top:6px">Ad Budget</div>
             <div style="font-size:12.5px;color:rgba(255,255,255,.55);margin-top:6px">Healthy starting point</div>
           </div>
           <div style="display:flex;align-items:center;color:rgba(255,255,255,.35)"><svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 7h17M13 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-          <div style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px;position:relative">
+          <div class="flow-step" style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px;position:relative">
             <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#F7A552">Step 02</div>
             <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-top:6px">Google Shopping</div>
             <div style="font-size:12.5px;color:rgba(255,255,255,.55);margin-top:6px">Feed &amp; bids decide reach</div>
             <span style="position:absolute;top:-9px;right:12px;background:#E0552B;color:#fff;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:100px">leak: feed</span>
           </div>
           <div style="display:flex;align-items:center;color:rgba(255,255,255,.35)"><svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 7h17M13 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-          <div style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px;position:relative">
+          <div class="flow-step" style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px;position:relative">
             <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#F7A552">Step 03</div>
             <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-top:6px">Product Page</div>
             <div style="font-size:12.5px;color:rgba(255,255,255,.55);margin-top:6px">Where clicks convert</div>
             <span style="position:absolute;top:-9px;right:12px;background:#E0552B;color:#fff;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:100px">leak: offer</span>
           </div>
           <div style="display:flex;align-items:center;color:rgba(255,255,255,.35)"><svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 7h17M13 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-          <div style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px;position:relative">
+          <div class="flow-step" style="flex:1 1 150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 16px;min-width:140px;position:relative">
             <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#F7A552">Step 04</div>
             <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-top:6px">Checkout</div>
             <div style="font-size:12.5px;color:rgba(255,255,255,.55);margin-top:6px">Trust &amp; friction matter</div>
