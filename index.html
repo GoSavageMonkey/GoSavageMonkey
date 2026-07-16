@@ -621,6 +621,13 @@ gtag('consent', 'default', {
   .flow-step:hover > div:nth-of-type(1) { color: rgba(0,0,0,.55) !important; }
   .flow-step:hover > div:nth-of-type(2) { color: #16120E !important; }
   .flow-step:hover > div:nth-of-type(3) { color: rgba(0,0,0,.6) !important; }
+  /* ===== approach cards hover (turn dark like step 04) ===== */
+  .approach-card { transition: background-color .3s ease, border-color .3s ease; }
+  .approach-card h3, .approach-card p, .approach-card > div:first-of-type { transition: color .3s ease; }
+  .approach-card:hover { background: #16120E !important; border-color: #16120E !important; }
+  .approach-card:hover h3 { color: #ffffff !important; }
+  .approach-card:hover p { color: rgba(255,255,255,.66) !important; }
+  .approach-card:hover > div:first-of-type { color: #F7A552 !important; }
   /* ===== interaction states (hover / focus) ===== */
   a[href="#book"], button[type="submit"], .nav-links a, details summary, #cookie-banner button {
     transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, opacity .18s ease;
@@ -847,27 +854,27 @@ gtag('consent', 'default', {
         <p style="font-size:18px;line-height:1.55;color:#5C544B;margin:18px 0 0;font-weight:500">We don't look at campaigns in isolation. We review the full path from click to purchase — connecting store readiness, product pages, offer strength, feed quality, tracking accuracy and campaign structure into one clear growth diagnosis.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:48px 0 0">
-        <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:18px;padding:28px;position:relative;box-shadow:0 1px 2px rgba(22,18,14,.04),0 14px 34px rgba(22,18,14,.04)">
+        <div class="approach-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:18px;padding:28px;position:relative;box-shadow:0 1px 2px rgba(22,18,14,.04),0 14px 34px rgba(22,18,14,.04)">
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#F2670F;letter-spacing:.04em">STEP 01</div>
-          <img src="icon-diagnosis.webp?v=2" alt="" width="120" height="120" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin:4px 0 0 auto;display:block">
+          <img src="icon-diagnosis.webp?v=2" alt="" width="150" height="150" style="width:150px;height:150px;object-fit:cover;border-radius:16px;margin:0 0 0 auto;display:block">
           <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin:18px 0 0">Diagnosis</h3>
           <p style="font-size:14px;line-height:1.55;color:#6B6258;margin:8px 0 0">We review every signal across store, feed, tracking and ads.</p>
         </div>
-        <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:18px;padding:28px;position:relative;box-shadow:0 1px 2px rgba(22,18,14,.04),0 14px 34px rgba(22,18,14,.04)">
+        <div class="approach-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:18px;padding:28px;position:relative;box-shadow:0 1px 2px rgba(22,18,14,.04),0 14px 34px rgba(22,18,14,.04)">
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#F2670F;letter-spacing:.04em">STEP 02</div>
-          <img src="icon-clarity.webp?v=2" alt="" width="120" height="120" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin:4px 0 0 auto;display:block">
+          <img src="icon-clarity.webp?v=2" alt="" width="150" height="150" style="width:150px;height:150px;object-fit:cover;border-radius:16px;margin:0 0 0 auto;display:block">
           <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin:18px 0 0">Clarity</h3>
           <p style="font-size:14px;line-height:1.55;color:#6B6258;margin:8px 0 0">We turn findings into a clear view of what's ready and what's not.</p>
         </div>
-        <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:18px;padding:28px;position:relative;box-shadow:0 1px 2px rgba(22,18,14,.04),0 14px 34px rgba(22,18,14,.04)">
+        <div class="approach-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:18px;padding:28px;position:relative;box-shadow:0 1px 2px rgba(22,18,14,.04),0 14px 34px rgba(22,18,14,.04)">
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#F2670F;letter-spacing:.04em">STEP 03</div>
-          <img src="icon-action-plan.webp?v=2" alt="" width="120" height="120" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin:4px 0 0 auto;display:block">
+          <img src="icon-action-plan.webp?v=2" alt="" width="150" height="150" style="width:150px;height:150px;object-fit:cover;border-radius:16px;margin:0 0 0 auto;display:block">
           <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin:18px 0 0">Action Plan</h3>
           <p style="font-size:14px;line-height:1.55;color:#6B6258;margin:8px 0 0">You get prioritized steps for store, products, feed and campaigns.</p>
         </div>
         <div style="background:#16120E;color:#fff;border-radius:18px;padding:28px;position:relative">
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#F7A552;letter-spacing:.04em">STEP 04</div>
-          <img src="icon-growth.webp?v=2" alt="" width="120" height="120" style="width:120px;height:120px;object-fit:cover;border-radius:16px;margin:4px 0 0 auto;display:block">
+          <img src="icon-growth.webp?v=2" alt="" width="150" height="150" style="width:150px;height:150px;object-fit:cover;border-radius:16px;margin:0 0 0 auto;display:block">
           <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin:18px 0 0">Growth</h3>
           <p style="font-size:14px;line-height:1.55;color:rgba(255,255,255,.66);margin:8px 0 0">We launch, rebuild or scale on a foundation that's actually ready.</p>
         </div>
