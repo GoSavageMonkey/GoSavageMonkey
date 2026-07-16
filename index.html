@@ -618,6 +618,26 @@ gtag('consent', 'default', {
   .approach-card:hover h3 { color: #ffffff !important; }
   .approach-card:hover p { color: rgba(255,255,255,.66) !important; }
   .approach-card:hover > div:first-of-type { color: #F7A552 !important; }
+  /* ===== deliverables cards: arrow slides in from the right on hover ===== */
+  .deliv-card { transition: border-color .25s ease, box-shadow .25s ease; }
+  .deliv-card::after {
+    content: "\2192";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translate(16px, -50%);
+    opacity: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #F2670F;
+    transition: transform .3s ease, opacity .3s ease;
+    pointer-events: none;
+  }
+  .deliv-card:hover::after { transform: translate(0, -50%); opacity: 1; }
+  .deliv-card:hover {
+    border-color: rgba(242,103,15,.35);
+    box-shadow: 0 6px 18px rgba(22,18,14,.08);
+  }
   /* ===== interaction states (hover / focus) ===== */
   a[href="#book"], button[type="submit"], .nav-links a, details summary, #cookie-banner button {
     transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, opacity .18s ease;
@@ -911,12 +931,12 @@ gtag('consent', 'default', {
         </div>
         <!-- deliverables list -->
         <div style="display:flex;flex-direction:column;gap:11px">
-          <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Growth Blockers Map</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">What limits sales, ROAS or scaling.</div></div></div>
-          <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Product Priority Map</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Products grouped by scale, fix, test or exclude.</div></div></div>
-          <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Critical Fix List</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">The most important changes before launch or scale.</div></div></div>
-          <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Feed &amp; Merchant Center Findings</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Issues affecting Shopping visibility and performance.</div></div></div>
-          <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Tracking Confidence Review</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Whether your conversion data can be trusted.</div></div></div>
-          <div style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Google Shopping Action Plan</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Next steps for structure, products, feed and optimization.</div></div></div>
+          <div class="deliv-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Growth Blockers Map</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">What limits sales, ROAS or scaling.</div></div></div>
+          <div class="deliv-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Product Priority Map</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Products grouped by scale, fix, test or exclude.</div></div></div>
+          <div class="deliv-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Critical Fix List</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">The most important changes before launch or scale.</div></div></div>
+          <div class="deliv-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Feed &amp; Merchant Center Findings</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Issues affecting Shopping visibility and performance.</div></div></div>
+          <div class="deliv-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Tracking Confidence Review</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Whether your conversion data can be trusted.</div></div></div>
+          <div class="deliv-card" style="background:#fff;border:1px solid rgba(22,18,14,.07);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;position:relative;overflow:hidden"><span style="width:8px;height:8px;border-radius:50%;background:#F2670F;margin-top:7px;flex:none"></span><div><div style="font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600">Google Shopping Action Plan</div><div style="font-size:13.5px;color:#6B6258;margin-top:3px">Next steps for structure, products, feed and optimization.</div></div></div>
         </div>
       </div>
       <!-- before / after -->
