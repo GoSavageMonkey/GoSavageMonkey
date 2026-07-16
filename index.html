@@ -557,18 +557,7 @@ gtag('consent', 'default', {
       border-bottom:1px solid rgba(22,18,14,.08) !important;
     }
     .nav-checkbox:checked ~ .nav-links a{padding:13px 0;width:100%;font-size:16px}
-    .hero-photo{
-      position:static !important;
-      left:auto !important;
-      top:auto !important;
-      width:100% !important;
-      max-width:380px !important;
-      height:auto !important;
-      margin:28px auto 0 !important;
-      display:block !important;
-      mask-image:none !important;
-      -webkit-mask-image:none !important;
-    }
+    .hero-visual{display:none !important}
     .hero-chip{display:none !important}
   }
   @media (max-width:600px){
@@ -706,7 +695,7 @@ gtag('consent', 'default', {
         
       </div>
       <!-- right monkey + chips + feature list -->
-      <div style="flex:1 1 520px;min-width:320px;position:relative;align-self:stretch;min-height:500px;z-index:2">
+      <div class="hero-visual" style="flex:1 1 520px;min-width:320px;position:relative;align-self:stretch;min-height:500px;z-index:2">
         <img class="hero-photo" src="monkey-hero-photo.webp" alt="Smartmonkey — Shopify growth diagnostics mascot" style="position:absolute;right:-32px;bottom:-76px;height:calc(100% + 140px);width:auto;max-width:none;display:block;object-fit:contain;object-position:bottom right;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 22%,#000 86%,transparent 100%),linear-gradient(to bottom,#000 72%,transparent 99%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0%,#000 22%,#000 86%,transparent 100%),linear-gradient(to bottom,#000 72%,transparent 99%);mask-composite:intersect;pointer-events:none">
         <!-- corner crosshairs -->
         
