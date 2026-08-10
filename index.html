@@ -654,6 +654,13 @@ gtag('consent', 'default', {
   .compare-card:hover { background: #16120E !important; border-color: #16120E !important; }
   .compare-card:hover > div:first-child { color: #F7A552 !important; }
   .compare-card:hover p { color: rgba(255,255,255,.82) !important; }
+  /* ===== AI monitoring cards (05) ===== */
+  .ai-card { transition: background-color .3s ease, border-color .3s ease, transform .3s ease; }
+  .ai-card:hover {
+    background: rgba(247,165,82,.1) !important;
+    border-color: rgba(247,165,82,.42) !important;
+    transform: translateY(-3px);
+  }
   /* ===== interaction states (hover / focus) ===== */
   a[href="#book"], button[type="submit"], .nav-links a, details summary, #cookie-banner button {
     transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, opacity .18s ease;
@@ -995,11 +1002,58 @@ gtag('consent', 'default', {
   </div>
 </section>
 
+  <!-- ===================== BLOCK 5B — AI-ASSISTED MONITORING ===================== -->
+  <section id="ai-monitoring" style="padding:96px 32px;background:#16120E;color:#fff">
+    <div style="max-width:1200px;margin:0 auto;width:100%">
+
+      <div style="max-width:780px">
+        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F7A552">05 — AI-assisted monitoring</div>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0">AI-Assisted Monitoring. Human-Led Decisions.</h2>
+        <p style="font-size:18px;line-height:1.55;color:rgba(255,255,255,.74);margin:18px 0 0;font-weight:500">We combine expert analysis with AI-assisted monitoring to continuously review campaign performance, competitive activity and market signals.</p>
+        <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,.6);margin:14px 0 0">This helps us spot changes, anomalies and new opportunities faster &mdash; so Google Shopping and Performance Max decisions are based not only on historical data, but also on what is happening in the market now.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:44px 0 0">
+
+        <div class="ai-card" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px">
+          <div style="width:42px;height:42px;border-radius:11px;background:rgba(247,165,82,.14);border:1px solid rgba(247,165,82,.3);display:flex;align-items:center;justify-content:center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 13.5l4-5 3.2 3.4L13 5.5l5 8" stroke="#F7A552" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="13" cy="5.5" r="1.9" fill="#F7A552"></circle></svg>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600;margin:16px 0 0">Campaign Monitoring</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.66);margin:8px 0 0">AI helps us detect unusual performance changes, inefficient spend and patterns that deserve deeper expert review.</p>
+        </div>
+
+        <div class="ai-card" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px">
+          <div style="width:42px;height:42px;border-radius:11px;background:rgba(247,165,82,.14);border:1px solid rgba(247,165,82,.3);display:flex;align-items:center;justify-content:center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 16.5V9M7.6 16.5V4M12.4 16.5v-6M17 16.5V6.5" stroke="#F7A552" stroke-width="1.7" stroke-linecap="round"></path></svg>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600;margin:16px 0 0">Competitor Intelligence</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.66);margin:8px 0 0">We track relevant changes in competitor pricing, offers, positioning and product activity to understand how your offer compares.</p>
+        </div>
+
+        <div class="ai-card" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px">
+          <div style="width:42px;height:42px;border-radius:11px;background:rgba(247,165,82,.14);border:1px solid rgba(247,165,82,.3);display:flex;align-items:center;justify-content:center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.2" stroke="#F7A552" stroke-width="1.7"></circle><path d="M10 2.8c2.1 2 3.2 4.6 3.2 7.2S12.1 15.2 10 17.2c-2.1-2-3.2-4.6-3.2-7.2S7.9 4.8 10 2.8zM3.1 10h13.8" stroke="#F7A552" stroke-width="1.7" stroke-linecap="round"></path></svg>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600;margin:16px 0 0">Market Signals</h3>
+          <p style="font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.66);margin:8px 0 0">We monitor broader category and market changes that may affect demand, pricing, competition and advertising performance.</p>
+        </div>
+
+      </div>
+
+      <div style="display:flex;align-items:center;gap:14px;margin:30px 0 0;background:rgba(247,165,82,.12);border:1px solid rgba(247,165,82,.3);border-radius:16px;padding:20px 24px">
+        <span style="width:8px;height:8px;border-radius:50%;background:#F7A552;flex:none;animation:smpulse 2.4s ease-in-out infinite"></span>
+        <p style="font-size:16px;line-height:1.5;color:rgba(255,255,255,.86);margin:0;font-weight:600">AI doesn&rsquo;t replace our specialists &mdash; it gives them more signals to make better decisions.</p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ===================== BLOCK 6 — OUTPUT MAP ===================== -->
   <section id="output" style="padding:108px 32px 96px">
     <div style="max-width:1200px;margin:0 auto;width:100%">
       <div style="max-width:680px">
-        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">05 — The deliverable</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">06 — The deliverable</div>
         <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0">You get a decision map, not just a report.</h2>
         <p style="font-size:18px;line-height:1.55;color:#5C544B;margin:18px 0 0;font-weight:500">After the diagnostic, you'll know what to scale, what to fix, what to test and what not to spend more budget on yet.</p>
       </div>
@@ -1043,7 +1097,7 @@ gtag('consent', 'default', {
     <div style="max-width:1200px;margin:0 auto;width:100%">
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
         <div style="max-width:620px">
-          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F7A552">06 — How it works</div>
+          <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F7A552">07 — How it works</div>
           <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0">How we find what blocks your growth.</h2>
           <p style="font-size:18px;line-height:1.55;color:rgba(255,255,255,.74);margin:18px 0 0;font-weight:500">A clear process for Shopify owners who want answers before committing more budget.</p>
         </div>
@@ -1064,7 +1118,7 @@ gtag('consent', 'default', {
   <section id="packages" style="padding:108px 32px 96px">
     <div style="max-width:1200px;margin:0 auto;width:100%">
       <div style="max-width:680px">
-        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">07 — Packages</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">08 — Packages</div>
         <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0">Choose the right level of growth readiness.</h2>
         <p style="font-size:18px;line-height:1.55;color:#5C544B;margin:18px 0 0;font-weight:500">Start with a full audit, or launch one or two growth channels — Google Shopping and eMAG — with the audit included free.</p>
       </div>
@@ -1141,7 +1195,7 @@ gtag('consent', 'default', {
   <section style="padding:96px 32px;background:#F1EADF">
     <div style="max-width:1200px;margin:0 auto;width:100%">
       <div style="max-width:700px">
-        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">08 — Different starting point</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">09 — Different starting point</div>
         <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0">We don't start with ads. We start with what blocks growth.</h2>
         <p style="font-size:18px;line-height:1.55;color:#5C544B;margin:18px 0 0;font-weight:500">Most teams begin inside Google Ads. We first check whether your store, products, feed, tracking and offer are ready to make that ad spend work harder.</p>
       </div>
@@ -1165,7 +1219,7 @@ gtag('consent', 'default', {
   <!-- ===================== FAQ ===================== -->
   <section id="faq" style="padding:108px 32px 96px">
     <div style="max-width:880px;margin:0 auto;width:100%">
-      <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">09 — Before you book</div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F2670F">10 — Before you book</div>
       <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 36px">Questions before booking?</h2>
       <div style="display:flex;flex-direction:column;gap:12px">
         <details style="background:#fff;border:1px solid rgba(22,18,14,.08);border-radius:14px;padding:4px 22px" open="">
